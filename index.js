@@ -775,13 +775,16 @@ app.get("/", async (req, res) => {
 app.get("/ex", (req, res) => {
   process.exit()
 })
-app.get("/get",async (req, res) => {
+app.get("/gett",async (req, res) => {
   res.send(await getjson())
 })
 app.get("/update",async (req, res) => {
+setTimeout(() => {
+    const th = path.join(__dirname, 's.png');
+    res.send(req.query.id);
+  }, 10);
 
-
-  res.send(req.query.id)
+  
 })
 
 app.get('/fb', async (req, res) => {
