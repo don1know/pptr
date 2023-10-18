@@ -705,7 +705,7 @@ app.get('/y4', async (req, res) => {
 })
 app.get('/y5', async (req, res) => {
   console.log(moment().tz('Asia/dhaka').format('h:m:ss a,D/M/YY') )
-  res.send(last_updated:moment().tz('Asia/dhaka').format('h:m:ss a,D/M/YY') )
+  res.send(moment().tz('Asia/dhaka').format('h:m:s a,D/M/YY') )
 
   /*
 
