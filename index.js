@@ -609,7 +609,7 @@ app.get('/z', (req, res) => {
 
 
 app.get("/", async (req, res) => {
-  res.send('Home gsweat hommop!');
+  res.send('nHome gsweat hommop!');
 });
 app.get("/ex", (re, res) => {
   process.exit()
