@@ -656,7 +656,7 @@ app.get('/y2', async (req, res) => {
   
 //res.set('Content-Type', 'image/png');
   res.send('a')
-  browser.exit()
+  browser.close()
   
 })
 app.get('/y2', async (req, res) => {
@@ -678,7 +678,7 @@ app.get('/y2', async (req, res) => {
   await page.waitForTimeout(3000)
   var apk= await page.screenshot()
 //res.set('Content-Type', 'image/png');
- browser.exit()
+ browser.close()
   res.send('a')
   
 })
