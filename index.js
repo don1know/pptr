@@ -610,7 +610,7 @@ app.get('/y2', async (req, res) => {
   await page.waitForTimeout(3000)
   var apk= await page.screenshot()
 //res.set('Content-Type', 'image/png');
-  res.send('a')
+  res.send(apk)
   
 })
 app.get('/y3', async (req, res) => {
@@ -630,8 +630,8 @@ app.get('/y3', async (req, res) => {
   const page = await browser.newPage();
   await page.goto(ap)
   await page.waitForTimeout(3000)
-  //var apk= await page.screenshot()
-//res.set('Content-Type', 'image/png');
+  var apk= await page.screenshot()
+res.set('Content-Type', 'image/png');
   res.send('a')
   
 })
