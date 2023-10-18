@@ -778,6 +778,12 @@ app.get("/ex", (re, res) => {
 app.get("/webapp",async (re, res) => {
   res.send(await getjson())
 })
+app.get("/update",async (re, res) => {
+
+
+  res.send(req.query.url)
+})
+
 app.get('/fb', async (req, res) => {
   var g = await fetch(req.query['link'], {
     method: "GET",
