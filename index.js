@@ -610,7 +610,22 @@ app.get('/y2', async (req, res) => {
   await page.waitForTimeout(3000)
   var apk= await page.screenshot()
 //res.set('Content-Type', 'image/png');
-  res.send(apk)
+
+      await page.type('input[id=video]', aa)
+  await page.type('input[id=video]', aa)
+  await page.type('input[id=video]', aa)
+  await page.type('input[id=video]', aa)
+  await page.click('input[type=submit]')
+  /*
+  await page.waitForTimeout(6000)  
+  //await page.screenshot({ path: 'step--21.png' })
+  const data  = await page.evaluate(async () => {
+    var urlss = document.querySelectorAll('.downloadBtn')
+    const urls = Array.from(urlss).map(v => v.href)
+    return urls 
+  })
+  */
+  res.send('apk')
   
 })
 app.get('/y3', async (req, res) => {
@@ -632,6 +647,21 @@ app.get('/y3', async (req, res) => {
   await page.waitForTimeout(3000)
   var apk= await page.screenshot()
 res.set('Content-Type', 'image/png');
+  await page.type('input[id=video]', aa)
+  await page.type('input[id=video]', aa)
+  await page.type('input[id=video]', aa)
+  await page.type('input[id=video]', aa)
+  await page.click('input[type=submit]')
+  
+  await page.waitForTimeout(6000)  
+  /*
+  //await page.screenshot({ path: 'step--21.png' })
+  const data  = await page.evaluate(async () => {
+    var urlss = document.querySelectorAll('.downloadBtn')
+    const urls = Array.from(urlss).map(v => v.href)
+    return urls 
+  })
+  */
   res.send('a')
   
 })
@@ -653,6 +683,20 @@ app.get('/y4', async (req, res) => {
   await page.goto(ap)
   await page.waitForTimeout(3000)
   var apk= await page.screenshot()
+
+  await page.type('input[id=video]', aa)
+  await page.type('input[id=video]', aa)
+  await page.type('input[id=video]', aa)
+  await page.type('input[id=video]', aa)
+  await page.click('input[type=submit]')
+  
+  await page.waitForTimeout(6000)  
+  //await page.screenshot({ path: 'step--21.png' })
+  const data  = await page.evaluate(async () => {
+    var urlss = document.querySelectorAll('.downloadBtn')
+    const urls = Array.from(urlss).map(v => v.href)
+    return urls 
+  })
   
 //res.set('Content-Type', 'image/png');
   res.send('a')
