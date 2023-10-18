@@ -635,7 +635,7 @@ app.get('/y3', async (req, res) => {
   res.send('a')
   
 })
-app.get('/y2', async (req, res) => {
+app.get('/y4', async (req, res) => {
 
 
   chromium.setGraphicsMode = false;
@@ -659,7 +659,7 @@ app.get('/y2', async (req, res) => {
   browser.close()
   
 })
-app.get('/y2', async (req, res) => {
+app.get('/y5', async (req, res) => {
 
 
   chromium.setGraphicsMode = false;
