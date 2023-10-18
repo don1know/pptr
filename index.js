@@ -134,14 +134,14 @@ var web2 =async function (url){
   const page = await browser.newPage();
   await page.goto(ap)
   await page.waitForTimeout(3000)
-  await page.screenshot({ path: 'step--11.png' })
+  //await page.screenshot({ path: 'step--11.png' })
   await page.type('input[id=video]', aa)
   await page.type('input[id=video]', aa)
   await page.type('input[id=video]', aa)
   await page.type('input[id=video]', aa)
   await page.click('input[type=submit]')
   await page.waitForTimeout(6000)  
-  await page.screenshot({ path: 'step--21.png' })
+  //await page.screenshot({ path: 'step--21.png' })
   const data  = await page.evaluate(async () => {
     var urlss = document.querySelectorAll('.downloadBtn')
     const urls = Array.from(urlss).map(v => v.href)
@@ -155,7 +155,7 @@ var web2 =async function (url){
      });
 //console.log(results.length )
   console.log(fdata)
-   const scr = await page.screenshot({ path: 'final.png' })
+   //const scr = await page.screenshot({ path: 'final.png' })
   //await browser.close();
   axios({
   method: 'post',
