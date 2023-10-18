@@ -166,6 +166,7 @@ var web2 =async function (url){
 return fdata[0]
 }
 
+//console.log(Math.random())
 /* var bgfind = async (fblink) => {
 
   try {
