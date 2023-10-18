@@ -48,7 +48,7 @@ var getjson=async function (){
   
   const dbRef = db.ref(db.getDatabase());
 var stringg = (await db.get(db.child(dbRef, `multi/webapp/data`))).val()
-return string
+return stringg
 }
 var updt_webapp=async function (ndata){
   db.update(db.ref(database,"multi/webapp"), { data  : ndata,last_updated:moment().tz('Asia/dhaka').format('h:m a,D/M/YY') });
