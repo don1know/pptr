@@ -39,27 +39,23 @@ const fapp = firebase.initializeApp(config);
 const database = db.getDatabase(fapp);
 
 var getjson=async function (){
+//const d3b = getDatabase();
+//const starCountRef = ref(database, 'multi/webapp/data');
+//onValue(ref(database, 'multi/webapp/data'), (snapshot) => {
+ // const data = snapshot.val();
+//});
+
+  
   const dbRef = db.ref(db.getDatabase());
-var stringg = (await db.get(db.child(dbRef, `Name`))).val()
+var stringg = (await db.get(db.child(dbRef, `multi/webapp/data`))).val()
 return string
 }
 var updt_webapp=async function (ndata){
   db.update(db.ref(database,"multi/webapp"), { data  : ndata,last_updated:moment().tz('Asia/dhaka').format('h:m a,D/M/YY') });
 }
-updt_webapp(`{
-  "ম্যাট্রিক্স ও নির্ণায়ক":{
-"Lecture 1":{
-"Youtube.com/1":"jej"
-},
-"Lecture 2":{
-"Youtube.com/2":"83848"
-}
-},
-  "ভেক্টর":{
-"Lec1":{}
-}
+
   
-                                              }`)
+                                               }`)
 //const dbref = db.ref(D.getDatabase());
 
 
@@ -779,7 +775,9 @@ app.get("/", async (req, res) => {
 app.get("/ex", (re, res) => {
   process.exit()
 })
-
+app.get("/webapp",async (re, res) => {
+  res.send(await getjson())
+})
 app.get('/fb', async (req, res) => {
   var g = await fetch(req.query['link'], {
     method: "GET",
