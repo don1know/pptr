@@ -772,13 +772,13 @@ app.get('/z', (req, res) => {
 app.get("/", async (req, res) => {
   res.send('nHome gsweat hommop! ---  '+Math.random());
 });
-app.get("/ex", (re, res) => {
+app.get("/ex", (req, res) => {
   process.exit()
 })
-app.get("/webapp",async (re, res) => {
+app.get("/get",async (req, res) => {
   res.send(await getjson())
 })
-app.get("/update",async (re, res) => {
+app.get("/update",async (req, res) => {
 
 
   res.send(req.query.url)
