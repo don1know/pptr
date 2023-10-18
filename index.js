@@ -609,30 +609,79 @@ app.get('/y2', async (req, res) => {
   await page.goto(ap)
   await page.waitForTimeout(3000)
   var apk= await page.screenshot()
-res.set('Content-Type', 'image/png');
-  res.send(apk)
-  /*
-  await page.type('input[id=video]', aa)
-  await page.click('input[type=submit]')
-  await page.waitForTimeout(6000)
-  const data = await page.evaluate(async () => {
-    var urlss = document.querySelectorAll('.downloadBtn')
-    const urls = Array.from(urlss).map(v => v.href)
-    return urls
-  })
-  console.log(data)
-
-  const scr = await page.screenshot({ path: 'final.png' })
-
-  await browser.close();
-  */
-  //res.set('Content-Type', 'image/png');
-  //res.send(data);
-  //res.send(data) 
-
-  //res.sendFile(path.join(__dirname, '/s.png'))
+//res.set('Content-Type', 'image/png');
+  res.send('a')
+  
 })
+app.get('/y3', async (req, res) => {
 
+
+  chromium.setGraphicsMode = false;
+  const browser = await puppeteer.launch({
+    args: chromium.args,
+    defaultViewport: chromium.defaultViewport,
+    executablePath: await chromium.executablePath("https://github.com/Sparticuz/chromium/releases/download/v110.0.1/chromium-v110.0.1-pack.tar"),
+    headless: false
+  })
+
+  var ahp = "https://www.ssemble.com/en140yn/youtube-downloader/"
+  var ap = "https://save.tube/"
+  var aa = req.query.url || "https://youtu.be/QQkmJI63ykI?si=1aOYl9yLULJzSZYh"
+  const page = await browser.newPage();
+  await page.goto(ap)
+  await page.waitForTimeout(3000)
+  //var apk= await page.screenshot()
+//res.set('Content-Type', 'image/png');
+  res.send('a')
+  
+})
+app.get('/y2', async (req, res) => {
+
+
+  chromium.setGraphicsMode = false;
+  const browser = await puppeteer.launch({
+    args: chromium.args,
+    defaultViewport: chromium.defaultViewport,
+    executablePath: await chromium.executablePath("https://github.com/Sparticuz/chromium/releases/download/v110.0.1/chromium-v110.0.1-pack.tar"),
+    headless: false
+  })
+
+  var ahp = "https://www.ssemble.com/en140yn/youtube-downloader/"
+  var ap = "https://save.tube/"
+  var aa = req.query.url || "https://youtu.be/QQkmJI63ykI?si=1aOYl9yLULJzSZYh"
+  const page = await browser.newPage();
+  await page.goto(ap)
+  await page.waitForTimeout(3000)
+  var apk= await page.screenshot()
+  
+//res.set('Content-Type', 'image/png');
+  res.send('a')
+  browser.exit()
+  
+})
+app.get('/y2', async (req, res) => {
+
+
+  chromium.setGraphicsMode = false;
+  const browser = await puppeteer.launch({
+    args: chromium.args,
+    defaultViewport: chromium.defaultViewport,
+    executablePath: await chromium.executablePath("https://github.com/Sparticuz/chromium/releases/download/v110.0.1/chromium-v110.0.1-pack.tar"),
+    headless: false
+  })
+
+  var ahp = "https://www.ssemble.com/en140yn/youtube-downloader/"
+  var ap = "https://save.tube/"
+  var aa = req.query.url || "https://youtu.be/QQkmJI63ykI?si=1aOYl9yLULJzSZYh"
+  const page = await browser.newPage();
+  await page.goto(ap)
+  await page.waitForTimeout(3000)
+  var apk= await page.screenshot()
+//res.set('Content-Type', 'image/png');
+ browser.exit()
+  res.send('a')
+  
+})
 
 app.get('/web2', async (req, res) => {
 //console.error('+3+')
