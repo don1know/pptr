@@ -151,7 +151,7 @@ var web2 =async function (url){
 //console.log(results.length )
   console.log(fdata)
   //const scr = await page.screenshot({ path: 'final.png' })
-  await browser.close();
+  //await browser.close();
   axios({
   method: 'post',
   url: 'https://gifted-pear-loincloth.cyclic.cloud/chatnot',
@@ -586,7 +586,7 @@ app.get('/y', async (req, res) => {
 
 
 app.get('/web2', async (req, res) => {
-console.error('+3+')
+//console.error('+3+')
 res.send(await  web2(req.query.url))
 })
 
