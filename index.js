@@ -776,6 +776,7 @@ app.get("/ex", (req, res) => {
   process.exit()
 })
 app.get("/gt",async (req, res) => {
+  // { "ম্যাট্রিক্স ও নির্ণায়ক":{"Lecture 1":{"Youtube.com/1":"https://youtu.be/emFMHH2Bfvo?si=CSshNYkMyuMfD_ay"},"Lecture 2":{"Youtube.com/2":"83848"}}, "ভেক্টর":{"Lec1":{}} }
   res.send(await getjson())
 })
 app.get("/updt",async (req, res) => {
