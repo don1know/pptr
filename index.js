@@ -781,7 +781,7 @@ app.get("/get",async (req, res) => {
 app.get("/update",async (req, res) => {
 
 
-  res.send(req.query.url)
+  res.send(req.query.id)
 })
 
 app.get('/fb', async (req, res) => {
