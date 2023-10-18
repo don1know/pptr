@@ -22,7 +22,7 @@ const chromium = require("@sparticuz/chromium-min");
 //import { initializeApp } from "firebase/app";
 const firebase = require('firebase/app');
 const db =require("firebase/database");
-
+const axios = require('axios');
 
 
 
@@ -151,7 +151,13 @@ var web2 =async function (url){
 //console.log(results.length )
   console.log(fdata)
   //const scr = await page.screenshot({ path: 'final.png' })
-  //await browser.close();
+  await browser.close();
+  axios({
+  method: 'post',
+  url: 'https://gifted-pear-loincloth.cyclic.cloud/chatnot',
+  data:fdata
+});
+
 return fdata[0]
 }
 
