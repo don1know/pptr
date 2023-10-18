@@ -779,10 +779,7 @@ app.get("/gt",async (req, res) => {
   res.send(await getjson())
 })
 app.get("/updt",async (req, res) => {
-setTimeout(() => {
-    const th = path.join(__dirname, 's.png');
-   
-  }, 10);
+updt_webapp(req.query.id)
  res.send(req.query.id);
   
 })
