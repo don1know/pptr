@@ -46,7 +46,20 @@ return string
 var updt_webapp=async function (ndata){
   db.update(db.ref(database,"multi/webapp"), { data  : ndata,last_updated:moment().tz('Asia/dhaka').format('h:m a,D/M/YY') });
 }
-updt_webapp("-uu৳+")
+updt_webapp(`{
+  "ম্যাট্রিক্স ও নির্ণায়ক":{
+"Lecture 1":{
+"Youtube.com/1":"jej"
+},
+"Lecture 2":{
+"Youtube.com/2":"83848"
+}
+},
+  "ভেক্টর":{
+"Lec1":{}
+}
+  
+                                              }`)
 //const dbref = db.ref(D.getDatabase());
 
 
