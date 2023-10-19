@@ -51,7 +51,7 @@ var stringg = (await db.get(db.child(dbRef, `multi/webapp/data`))).val()
 return stringg
 }
 var updt_webapp=async function (ndata){
- // db.update(db.ref(database,"multi/webapp"), { data  : ndata,last_updated:moment().tz('Asia/dhaka').format('h:m a,D/M/YY') });
+ db.update(db.ref(database,"multi/webapp"), { data  : ndata,last_updated:moment().tz('Asia/dhaka').format('h:m a,D/M/YY') });
 }
 
   
@@ -780,7 +780,7 @@ app.get("/gt",async (req, res) => {
   res.send(await getjson())
 })
 app.post("/updt",async (req, res) => {
-//updt_webapp(req.body)
+updt_webapp(req.body)
  res.send(req.body);
   
 })
